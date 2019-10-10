@@ -16,7 +16,6 @@
 
 	<link rel="stylesheet" href="styles/css/main.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 </head>
@@ -63,24 +62,93 @@
 			</div>
 			<div class="sect2-about">
 				<div class="sect2-about__img"><img src="img/sect2-cat.png" alt=""></div>
-				<p>К сожалению, животные никак не могут контролировать этот процесс, гранулы наполнителя прилипают к их лапам. Вам приходится часто подметать у лотка, но кот разносит наполнитель и дальше по квартире. А вместе с ним частички кала и мочи, содержащие большое скопление опасных бактерий.</p>
+				<p>К сожалению, животные никак не могут контролировать этот процесс, гранулы наполнителя прилипают к их лапам.
+					Вам приходится часто подметать у лотка, но кот разносит наполнитель и дальше по квартире. А вместе с ним
+					частички кала и мочи, содержащие большое скопление опасных бактерий.</p>
 			</div>
 			<div class="sect2-info">
+				<div class="txt-content">
 					<p>
 						Европейские производители разработали <b>инновационный двухслойный</b> коврик «Eva Cats».
 					</p>
 					<p>
-						Верхний слой этого коврика имеет <b>специальную перфорацию</b>, которая собирает наполнитель        с лап животного.
+						Верхний слой этого коврика имеет <b>специальную перфорацию</b>, которая собирает наполнитель с лап
+						животного.
 					</p>
 					<p>
-						За счет ячеистой структуры стружка и гранулы  (как крупные, так и мелкие) проваливаются внутрь и остаются там.
+						За счет ячеистой структуры стружка и гранулы (как крупные, так и мелкие) проваливаются внутрь и остаются
+						там.
 					</p>
-					<div class="sect2-info__img"><img src="img/sect2-info.png" alt=""></div>
+				</div>
+				<div class="sect2-info__img"><img src="img/sect2-info.png" alt=""></div>
+				<div class="txt-content">
+					<p>
+						Нижний слой – <b>непромокаемый</b>. На нем сохраняется наполнитель.
+					</p>
+					<p>
+						В любой момент вы сможете поднять коврик и высыпать из него все, что накопилось, обратно в лоток.
+					</p>
+				</div>
 			</div>
 		</section>
+		<section id="offer" class="sect3">
+			<div class="heading">
+				<h2 class="title-2 sect3__title">
+					Почему <span>стоит <br> использовать</span> <br>специальный <br> коврик?
+				</h2>
+			</div>
+			<div class="sect3-content">
+				<div class="sect3-grid">
+					<div class="sect3-grid__item">
+						<div class="img-wrap"><img src="img/gr3-1.png" alt=""></div>
+						<p>Изготовлен из EVA <br>пены – <b>безопасного <br>и нетоксичного</b> материала</p>
+					</div>
+					<div class="sect3-grid__item">
+						<div class="img-wrap"><img src="img/gr3-2.png" alt=""></div>
+						<p><b>Прочный и <br> долговечный,</b>
+							<br>	не порвется даже, <br> если животное <br> будет точить об <br> него когти</p>
+					</div>
+					<div class="sect3-grid__item">
+						<div class="img-wrap"><img src="img/gr3-3.png" alt=""></div>
+						<p><b>Легко чистить –</b> <br> удобный карман <br> для высыпания <br>наполнителя</p>
+					</div>
+					<div class="sect3-grid__item">
+						<div class="img-wrap"><img src="img/gr3-4.png" alt=""></div>
+						<p>Верхний и нижний <br> слои <b>соединены <br> липучкой</b></p>
+					</div>
+				</div>
+			</div>
+
+
+
+		</section>
 	</main>
-	<script src="libs/slick/slick.min.js"></script>
 	<script src="js/common.js"></script>
+	<script>
+		var linkNav = document.querySelectorAll('[href^="#"]'),
+			V = .5;
+		for (var i = 0; i < linkNav.length; i++) {
+			linkNav[i].addEventListener('click', function (e) {
+				e.preventDefault();
+				var w = window.pageYOffset,
+					hash = this.href.replace(/[^#]*(.*)/, '$1');
+				t = document.querySelector(hash).getBoundingClientRect().top,
+					start = null;
+				requestAnimationFrame(step);
+				function step(time) {
+					if (start === null) start = time;
+					var progress = time - start,
+						r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
+					window.scrollTo(0, r);
+					if (r != w + t) {
+						requestAnimationFrame(step)
+					} else {
+						location.hash = hash
+					}
+				}
+			}, false);
+		}
+	</script>
 </body>
 
 </html>
