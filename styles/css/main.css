@@ -486,6 +486,9 @@ section {
   line-height: 0.3rem;
   text-transform: uppercase;
   font-weight: 700;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .sect2--heading span {
