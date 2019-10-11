@@ -451,6 +451,7 @@ h2 {
 .sect1-grid .left__item,
 .sect1-grid .right__item {
   padding: .4rem .15rem;
+  height: 100%;
 }
 
 .sect1-grid .left__item:first-child {
@@ -477,7 +478,7 @@ h2 {
   background-image: url(../../img/sect1-4.jpg);
   background-position: bottom right;
   background-size: cover;
-  height: 1.74rem;
+  min-height: 1.34rem;
   color: #1c0431;
 }
 
