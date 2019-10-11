@@ -97,7 +97,7 @@
 				</div>
 			</div>
 		</section>
-		<section id="offer" class="sect3">
+		<section class="sect3">
 			<div class="heading">
 				<h2 class="title-2 sect3__title">
 					Почему <span>стоит <br> использовать</span> <br>специальный <br> коврик?
@@ -244,17 +244,62 @@
 				<div class="swiper-pagination"></div>
 			</div>
 		</section>
+		<section class="sect6">
+			<div class="heading">
+				<h2 class="title-2 title-2--sect6">
+					<span>Как заказать</span> <br>
+					коврик <br>
+					«Eva Cats»?
+				</h2>
+			</div>
+			<ul class="sect6__content">
+				<div class="sect6__item">
+					<div class="img-wrap"><img src="img/builet1.png" alt=""></div>
+					<p><span>Оставьте заявку</span> на нашем сайте </p>
+				</div>
+				<div class="sect6__item">
+					<div class="img-wrap"><img src="img/builet2.png" alt=""></div>
+					<p><span>Мы перезвоним вам</span>в течение 5 минут для подтверждения заказа </p>
+				</div>
+				<div class="sect6__item">
+					<div class="img-wrap"><img src="img/builet3.png" alt=""></div>
+					<p><span>Доставим товар</span> курьером за 3-7 дней</p>
+				</div>
+			</ul>
+		</section>
+		<footer id="offer" class="footer">
+			<h2 class="footer__title">
+				<span>Коврик</span>
+				Eva <br>
+				Cats
+			</h2>
+			<div class="price">
+				<div class="price__now">438 <span>₽</span></div>
+				<div class="price__before"><sup><s>672 ₽</s></sup></div>
+			</div>
+			<div class="footer-img">
+				<img src="img/header.png" alt="">
+			</div>
+
+			<form action="" class="offer">
+				<div class="input-wrap"><img src="img/name.png" alt=""><input type="text" required name="name"
+						placeholder="Введите ваше имя"></div>
+				<div class="input-wrap"><img src="img/phone.png" alt=""><input type="number" required name="phone"
+						placeholder="Введите ваш телефон"></div>
+				<button class="btn"><span>Заказать</span></button>
+			</form>
+		</footer>
+		<div class="page-bottom">
+			Разработка сайта
+		</div>
 	</main>
 
 	<script src="libs/swiper/swiper.min.js"></script>
-
-
-
 	<script src="js/common.js"></script>
 
 	<script>
 		var linkNav = document.querySelectorAll('[href^="#"]'),
-			V = .5;
+			V = .2;
 		for (var i = 0; i < linkNav.length; i++) {
 			linkNav[i].addEventListener('click', function (e) {
 				e.preventDefault();
@@ -277,7 +322,14 @@
 			}, false);
 		}
 	</script>
-
+	<script>
+		(function () {
+			var input = document.querySelector('input[name="name"]');
+			input.addEventListener('input', function () {
+				input.value = input.value.replace(/[0-9]/g, '')
+			})
+		})()
+	</script>
 </body>
 
 </html>
