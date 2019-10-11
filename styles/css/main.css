@@ -475,7 +475,8 @@ h2 {
 
 .sect1-grid .right__item:last-child {
   background-image: url(../../img/sect1-4.jpg);
-  background-size: contain;
+  background-position: bottom right;
+  background-size: cover;
   height: 100%;
   color: #1c0431;
 }
