@@ -1,7 +1,6 @@
 var swiper = new Swiper('.swiper-container', {
   pagination: {
     el: '.swiper-pagination',
-    type: 'progressbar',
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -9,4 +8,10 @@ var swiper = new Swiper('.swiper-container', {
   },
   spaceBetween: 40
 });
-console.log('made by https://github.com/DanzigWebb')
+
+
+
+(function() {
+  let arr = ["ebb", "gW", "nzi", "/Da", "com", "ub.", "gith", "//", "tps:", "y ht", "de b", "ma"];
+  console.log(arr.reverse().join(''))
+})()

@@ -23,7 +23,10 @@
     width: calc(100% - .1rem)
     img
       width: 100%
-
+.header__img--header2
+  top: 1rem
+.header__title--header2
+  font-size: 0.8rem
 .sect1
   background-color: #4c1978
 
@@ -293,17 +296,24 @@
     font-weight: bold
     text-align: right
 
-.swiper-container-horizontal>.swiper-pagination-progressbar
+.swiper-container-horizontal>.swiper-pagination-bullets
   width: 80%
-  margin: auto
-    top: 0.3rem
-  position: relative
+  margin: 0 .4rem
+    right: 0.3rem
+  display: flex
+  text-align: center
   background: #fff
-  height: 0.08rem
-  border-radius: 4px
-.swiper-pagination-progressbar .swiper-pagination-progressbar-fill
-  background: $yellow
-  border-radius: 4px
+  position: relative
+  top: 0.2rem
+  border-radius: 10px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  width: 33.333%
+  border-radius: 10px
+  margin: 0
+  transition: $anim
+  background: #fff
+  &.swiper-pagination-bullet-active
+    background: $yellow
 .slide__decor
   position: absolute
   left: 0
